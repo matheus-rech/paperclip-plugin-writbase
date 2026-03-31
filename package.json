@@ -1,0 +1,54 @@
+{
+  "name": "paperclip-plugin-writbase",
+  "version": "0.1.0",
+  "description": "Bidirectional sync between Paperclip issues and WritBase tasks",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "paperclipPlugin": {
+    "manifest": "./dist/manifest.js",
+    "worker": "./dist/worker.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "paperclip",
+    "plugin",
+    "writbase",
+    "connector",
+    "mcp",
+    "task-management",
+    "agent",
+    "sync"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Writbase/paperclip-plugin-writbase.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@paperclipai/plugin-sdk": "*",
+    "@paperclipai/shared": "*"
+  },
+  "devDependencies": {
+    "@paperclipai/plugin-sdk": "*",
+    "@paperclipai/shared": "*",
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}
